@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700&family=Exo+2:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="expense.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="title-container">
+      <h1 class="title">Expense Tracker</h1>
+    </div>
+
+    <div class="expense-input-container">
+      <div class="section-header">Enter Expense</div>
+      <div class="form-container">
+        <div class="date-input">
+          Date:
+          <input type="date" name="date" id="date" />
+        </div>
+        <div class="type-input">
+          Type:
+          <select name="type" id="type">
+            <option value="cash">Cash</option>
+            <option value="credit">Credit</option>
+            <option value="crypto">Crypto</option>
+          </select>
+        </div>
+        <div class="vendor-input">
+          Merchant:
+          <input type="text" name="merchant" id="merchant" />
+        </div>
+        <div class="amount-input">
+          Amount: $
+          <input type="number" name="amount" id="amount" />
+        </div>
+      </div>
+      <button class="enter-button">ENTER</button>
+    </div>
+
+    <div class="expense-table-container"></div>
+  </body>
+</html>
