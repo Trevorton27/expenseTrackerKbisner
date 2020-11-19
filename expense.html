@@ -16,7 +16,7 @@
       <h1 class="title">Expense Tracker</h1>
     </div>
 
-    <div class="expense-input-container">
+    <div id="expense-input-container">
       <div class="section-header">Enter Expense</div>
       <div class="form-container">
         <div class="date-input">
@@ -26,12 +26,12 @@
         <div class="type-input">
           Type:
           <select name="type" id="type">
-            <option value="cash">Cash</option>
-            <option value="credit">Credit</option>
-            <option value="crypto">Crypto</option>
+            <option value="Cash">Cash</option>
+            <option value="Credit">Credit</option>
+            <option value="Crypto">Crypto</option>
           </select>
         </div>
-        <div class="vendor-input">
+        <div class="marchant-input">
           Merchant:
           <input type="text" name="merchant" id="merchant" />
         </div>
@@ -40,9 +40,25 @@
           <input type="number" name="amount" id="amount" />
         </div>
       </div>
-      <button class="enter-button">ENTER</button>
+      <button type="button" id="data-button">ENTER</button>
+      <!-- data error message goes here -->
     </div>
 
-    <div class="expense-table-container"></div>
+    <div class="expense-table-container">
+      <table>
+        <thead>
+          <tr>
+            <th id="table-head-date">Date</th>
+            <th id="table-head-type">Type</th>
+            <th id="table-head-merchant">Merchant</th>
+            <th id="table-head-amount">Amount</th>
+            <th id="table-head-delete">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="expense-table"></tbody>
+      </table>
+      <!-- all expenses to go into the table go here -->
+    </div>
+    <script src="expense.js"></script>
   </body>
 </html>
