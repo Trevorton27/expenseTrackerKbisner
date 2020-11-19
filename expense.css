@@ -112,6 +112,10 @@ th {
   text-align: center;
 }
 
+th {
+  font-weight: 700;
+}
+
 #expenseRow {
   width: 100%;
 }
