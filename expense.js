@@ -110,7 +110,6 @@ function displayData(arrayToDisplay) {
   expenseTable.appendChild(newTableRow);
 
   createEventListener();
-  // console.log("expenseArray: ", expenseArray);
 }
 
 function clearTableDisplay() {
@@ -146,8 +145,6 @@ function deleteExpense(e) {
 }
 
 function countSiblings(target) {
-  // console.log("target: ", target);
-  // console.log("countSibling function is being called");
 
   let currentNode = target;
   let parentNodeExpenseRow = target.parentNode.parentNode;
@@ -159,7 +156,6 @@ function countSiblings(target) {
     currentNode = previousSiblingNode;
     previousSiblingNode = previousSiblingNode.previousSibling;
   }
-  // console.log("numberOfSiblings: ", numberOfSiblings);
   return numberOfSiblings
 }
 
