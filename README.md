@@ -7,7 +7,7 @@ _A simple web-based expense tracker_
 
 <br>
 
-[Try it out]!(insert app link here)
+[Try it out!](https://kbiz65.github.io/expense-tracker/)
 
 <br>
 
