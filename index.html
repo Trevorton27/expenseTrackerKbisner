@@ -15,34 +15,37 @@
     <div class="title-container">
       <h1 class="title">Expense Tracker</h1>
     </div>
-
-    <div id="expense-input-container">
-      <div class="section-header">Enter Expense</div>
-      <div class="form-container">
-        <div class="date-input">
-          Date:
-          <input type="date" name="date" id="date" />
-        </div>
-        <div class="type-input">
-          Type:
-          <select name="type" id="type">
-            <option value="Cash">Cash</option>
-            <option value="Credit">Credit</option>
-            <option value="Crypto">Crypto</option>
-          </select>
-        </div>
-        <div class="marchant-input">
-          Merchant:
-          <input type="text" name="merchant" id="merchant" />
-        </div>
-        <div class="amount-input">
-          Amount: $
-          <input type="number" name="amount" id="amount" />
-        </div>
+    <form id="form">
+      <div id="expense-input-container">
+        <div class="section-header">Enter Expense</div>
+        <form class="form-container">
+          <div class="date-input">
+            Date:
+            <input type="date" name="date" id="date" />
+          </div>
+          <div class="type-input">
+            Type: 
+            <select name="type" id="type">
+              <option value="">Select Payment</option>
+              <option value="Cash">Cash</option>
+              <option value="Credit">Credit</option>
+              <option value="Crypto">Crypto</option>
+            </select>
+          </div>
+          <div class="marchant-input">
+            Merchant:
+            <input type="text" name="merchant" id="merchant" />
+          </div>
+          <div class="amount-input">
+            Amount: $
+            <input type="number" name="amount" id="amount" />
+          </div>
+        </form>
+        <button type="button" id="data-button">ENTER</button>
+        <!-- data error message goes here -->
       </div>
-      <button type="button" id="data-button">ENTER</button>
-      <!-- data error message goes here -->
-    </div>
+    </form>
+  
 
     <div class="expense-table-container">
       <table>
