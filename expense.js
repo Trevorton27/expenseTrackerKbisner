@@ -91,15 +91,16 @@ function displayData(newExpenseItem) {
 
   const tableRowAmount = document.createElement('td');
   tableRowAmount.setAttribute('id', 'expenseItemAmount');
-
   const tableRowDelete = document.createElement('td');
 
+  const deleteButton = document.createElement('button');
+  tableRowDelete.appendChild(deleteButton);
   const newTableDataDeleteImg = document.createElement('img');
   newTableDataDeleteImg.setAttribute('id', 'task-delete-img');
   newTableDataDeleteImg.setAttribute('src', 'images/redx.png');
   newTableDataDeleteImg.setAttribute('alt', 'red brushstroke x');
-  tableRowDelete.appendChild(newTableDataDeleteImg);
-  tableRowDelete.setAttribute('id', 'task-delete');
+  deleteButton.appendChild(newTableDataDeleteImg);
+  //tableRowDelete.setAttribute('id', 'task-delete');
 
   expenseTable.appendChild(newTableRow);
 
@@ -114,12 +115,21 @@ function displayData(newExpenseItem) {
   tableRowMerchant.textContent = newExpenseItem.merchant;
   tableRowAmount.textContent = newExpenseItem.amount;
 
-  const deleteButton = document.getElementById('task-delete');
   deleteButton.addEventListener('click', deleteExpense);
 }
 
 function deleteExpense(e) {
   e.preventDefault();
-  let targetRow = e.target.parentElement.parentElement;
-  targetRow.remove();
+  let mainElement = e.target.parentNode.parentNode.parentNode.parentNode;
+  let row = e.target.parentNode.parentNode.parentNode.id;
+  for (let i = 0; i < expenseArray.length; i++) {
+    if (expenseArray[i].id === Number(row)) {
+      expenseArray.splice(i, 1);
+      let targetRow = document.getElementById(row);
+      mainElement.removeChild(targetRow);
+      saveRawData();
+    }
+  }
+
+  console.log('i fired');
 }
