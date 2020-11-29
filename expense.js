@@ -113,6 +113,6 @@ function displayData(newExpenseItem) {
 
 function deleteExpense(e) {
   e.preventDefault();
-  let targetRow = e.target.parentElement;
+  let targetRow = e.target.parentElement.parentElement;
   targetRow.remove();
 }
