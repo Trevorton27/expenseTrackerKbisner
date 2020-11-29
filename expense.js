@@ -10,7 +10,6 @@ const expenseInputContainer = document.getElementById(
   'expense-input-container'
 );
 const elementTableToClear = document.getElementById('expense-table');
-const form = document.getElementById('form-container');
 
 window.addEventListener('load', updateTable);
 
@@ -36,11 +35,19 @@ function pushExpense() {
   //clearTableDisplay();
   //getRawData();
   displayData(newExpenseItem);
-  form.reset();
+  const form = document.getElementsByClassName('form-container');
+  clearForm();
 }
 
 function pushDataToArray(newExpenseItem) {
   expenseArray.push(newExpenseItem);
+}
+
+function clearForm() {
+  inputDate.value = '';
+  inputAmount.value = '';
+  inputMerchant.value = '';
+  inputType.value = '';
 }
 function validateData() {
   const dataErrorMessage = document.createElement('p');
