@@ -32,10 +32,7 @@ function pushExpense() {
 
   pushDataToArray(newExpenseItem);
   saveRawData(newExpenseItem);
-  //clearTableDisplay();
-  //getRawData();
   displayData(newExpenseItem);
-  const form = document.getElementsByClassName('form-container');
   clearForm();
 }
 
@@ -99,11 +96,9 @@ function displayData(newExpenseItem) {
   newTableDataDeleteImg.setAttribute('id', 'task-delete-img');
   newTableDataDeleteImg.setAttribute('src', 'images/redx.png');
   newTableDataDeleteImg.setAttribute('alt', 'red brushstroke x');
+
   deleteButton.appendChild(newTableDataDeleteImg);
-  //tableRowDelete.setAttribute('id', 'task-delete');
-
   expenseTable.appendChild(newTableRow);
-
   newTableRow.appendChild(tableRowDate);
   newTableRow.appendChild(tableRowPaymentType);
   newTableRow.appendChild(tableRowMerchant);
@@ -130,6 +125,4 @@ function deleteExpense(e) {
       saveRawData();
     }
   }
-
-  console.log('i fired');
 }
