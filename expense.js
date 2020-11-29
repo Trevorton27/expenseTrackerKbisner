@@ -10,7 +10,7 @@ const expenseInputContainer = document.getElementById(
   'expense-input-container'
 );
 const elementTableToClear = document.getElementById('expense-table');
-const form = document.getElementById('form');
+const form = document.getElementById('form-container');
 
 window.addEventListener('load', updateTable);
 
@@ -113,13 +113,6 @@ function displayData(newExpenseItem) {
 
 function deleteExpense(e) {
   e.preventDefault();
-  console.log(e.target.parentNode.id);
-  let rowId = e.target.parentNode.id;
-  for (let i = 0; i < expenseArray.length; i++) {
-    if (expenseArray[i].id === rowId) {
-      expenseArray.splice(i, 1);
-      rowId.parentNode.removeChild(rowId);
-      saveRawData();
-    }
-  }
+  let targetRow = e.target.parentElement;
+  targetRow.remove();
 }
